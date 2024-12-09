@@ -1,0 +1,324 @@
+body {
+    font-family: eras itc;
+    margin: 0;
+    padding: 10px; /* Add space around the edges */
+    background-color: #a9447f; /* Same color as the navbar */
+    color: #333;
+}
+
+header, main {
+    background-color: white; /* Content background */
+    border-radius: 10px; /* Rounded corners for aesthetics */
+    padding: 10px; /* Inner padding for spacing */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #a9447f;
+    padding: 10px 20px;
+    border-radius: 10px; /* Match outer radius */
+}
+
+.navbar .logo {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .logo img {
+    height: 60px;
+    margin-right: 15px;
+}
+
+.navbar .logo-name {
+    font-weight: bold;
+    font-size: 25px;
+    color: white;
+}
+
+.navbar .nav-links {
+    display: flex;
+    gap: 15px;
+}
+
+.navbar .nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+.navbar .extras {
+    display: flex;
+    align-items: center;
+    gap: 1px;
+    position: relative;
+}
+
+.navbar .extras .small-logo {
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+}
+
+.navbar .language-menu {
+    position: relative;
+}
+
+.navbar .language-button {
+    background-color: transparent;
+    border: none;
+    color: black;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.navbar .language-dropdown {
+    display: none;
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ccc;
+    margin-top: 5px;
+    right: 0;
+    list-style: none;
+    padding: 5px 10px;
+    z-index: 10;
+}
+
+.navbar .language-dropdown li {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.navbar .language-dropdown li:hover {
+    background-color: #f0f0f0;
+}
+/* Ensure the body and html occupy full height */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scrollbars */
+}
+.left-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    max-width: 70%;
+}
+.right-content {
+    flex: 1;
+    margin-left: 20px;
+    padding: 20px;
+    max-width: 30%;
+}
+
+.right-content h2 {
+    margin-top: 0;
+}
+
+.right-content ul {
+    list-style-type: none;
+    padding: 0;
+}
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .left-content, .right-content {
+        max-width: 100%;
+    }
+}
+/* List Items Styles */
+.right-content li {
+    margin: 10px 0;
+    border-bottom: 1px solid #ccc; 
+}
+
+.right-content li:last-child {
+    border-bottom: none; 
+}
+
+.right-content a {
+    text-decoration: none;
+    color: #000;
+}
+
+.right-content a:hover {
+    color: #a9447f; 
+}
+/* Footer Styles */
+.footer {
+    background-color: #a9447f;
+    color: white;
+    text-align: center;
+    padding: 20px 10px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.footer .social-media {
+    margin-bottom: 10px;
+}
+
+.footer .social-media a {
+    margin: 0 10px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.footer .social-media img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+}
+
+.footer .social-media img:hover {
+    transform: scale(1.1);
+}
+
+.footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Table Styles */
+.table-container {
+    margin: 20px auto;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+}
+
+table {
+    width: 200%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table th, table td {
+    padding: 12px 15px;
+    text-align: center;
+    border-bottom: 1px solid #ccc; 
+}
+
+table th {
+    background-color: #a9447f;
+    color: white;
+}
+
+table td {
+    background-color: #f9f9f9;
+}
+
+table tr:hover {
+    background-color: #f1f1f1;
+}
+/* Mobile Menu Styles */
+.mobile-menu {
+    display: none; /* Initially hidden */
+    flex-direction: column;
+    gap: 10px;
+    background-color: #a9447f; /* Matches the theme color */
+    padding: 15px;
+    border-radius: 10px;
+    position: absolute;
+    top: 60px; /* Positioned below the navbar */
+    right: 40px; /* Aligns with the navbar */
+    z-index: 1000;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Adds a slight shadow for emphasis */
+}
+
+.mobile-menu a {
+    text-decoration: none;
+    color: white; /* Text color to match theme */
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.mobile-menu a:hover {
+    background-color: #a9447f; /* Slightly darker hover effect */
+}
+
+/* Hamburger Menu Button */
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    z-index: 1100; /* Ensure it's above other elements */
+}
+
+.hamburger-menu span {
+    width: 25px;
+    height: 3px;
+    background-color: #a9447f; /* Matches navbar text color */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Active State for Mobile Menu */
+.nav-links.active {
+    display: flex;
+}
+
+/* Responsive Styles for Smaller Screens */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hide default nav links */
+    }
+
+    .hamburger-menu {
+        display: flex; /* Show hamburger menu */
+    }
+
+    .mobile-menu {
+        display: flex; /* Display mobile menu when active */
+    }
+}
+/* hamburger menu */
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.hamburger-menu span {
+    width: 25px;
+    height: 3px;
+    background-color: #a9447f;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        right: 20px;
+        background-color: #333;
+        padding: 10px;
+        border-radius: 5px;
+        z-index: 1000;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
+}

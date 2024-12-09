@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pelaajat - Laurea Penguins</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/styles_players.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">
+            <img src="./images/IMG_0164.jpg" alt="Logo">
+            <span class="logo-name">LAUREA PENGUINS</span>
+        </div>
+
+        <!-- Mobile Menu Button (only displayed in mobile view) -->
+        <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-expanded="false">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Mobile Menu -->
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="mobileMenuLabel">Valikko</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <!-- Navigation Links -->
+                <ul class="navbar-nav mb-3">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Koti</a></li>
+                    <li class="nav-item"><a class="nav-link" href="players.html">Pelaajat</a></li>
+                    <li class="nav-item"><a class="nav-link" href="shop.html">Kauppa</a></li>
+                    <li class="nav-item"><a class="nav-link" href="stats.html">Otteluohjelma</a></li>
+                    <li class="nav-item"><a class="nav-link" href="video.html">Video</a></li>
+                </ul>
+                    <!-- Language Menu -->
+                    <div class="language-menu">
+                        <h6>Kieli:</h6>
+                        <button class="language-button btn btn-outline-secondary mb-2 w-100" 
+                                onclick="toggleLanguageMenu()" 
+                                onkeypress="handleLanguageKey(event)" 
+                                aria-expanded="false">FI</button>
+                        <ul class="language-dropdown list-group" style="display: none;">
+                            <li class="list-group-item" onclick="changeLanguage('en')">Englanti</li>
+                            <li class="list-group-item" onclick="changeLanguage('fi')">Suomi</li>
+                            <li class="list-group-item" onclick="changeLanguage('es')">Espanja</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+    <!-- Desktop Navigation (visible only on larger screens) -->
+<nav class="nav-links d-none d-lg-flex align-items-center">
+    <a href="index.html">Koti</a>
+    <a href="players.html">Pelaajat</a>
+    <a href="shop.html">Kauppa</a>
+    <a href="stats.html">Otteluohjelma</a>
+    <a href="video.html">Video</a>
+
+    <!-- Language Menu for Desktop -->
+    <div class="language-menu ms-3">
+        <button id="desktopLanguageButton" class="language-button btn btn-outline-secondary">FI</button>
+        <ul id="desktopLanguageDropdown" class="language-dropdown list-group">
+            <li class="list-group-item" onclick="changeLanguage('en')">Englanti</li>
+            <li class="list-group-item" onclick="changeLanguage('fi')">Suomi</li>
+            <li class="list-group-item" onclick="changeLanguage('es')">Espanja</li>
+        </ul>
+    </div>
+</nav>
+    </header>
+    <main class="container">
+        <section class="table-container">
+            <h2>Laurea Penguins Pelaajat</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Nimi</th>
+                        <th>Pelipaikka</th>
+                        <th>Pisteet / T%</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>1</td><td>Rasmus Kettunen</td><td>Maalivahti</td><td>0.000</td></tr>
+                    <tr><td>2</td><td>Taavi Kannisto</td><td>Puolustaja</td><td>1 + 0 = 1</td></tr>
+                    <tr><td>7</td><td>Lauri Pohjanhovi</td><td>Hyökkääjä</td><td>0 + 1 = 1</td></tr>
+                    <tr><td>8</td><td>Martin Schmerling</td><td>Puolustaja</td><td>0 + 0 = 0</td></tr>
+                    <tr><td>9</td><td>Erno Parkkonen</td><td>Hyökkääjä</td><td>0 + 2 = 2</td></tr>
+                    <tr><td>10</td><td>Miro Järvinen</td><td>Puolustaja</td><td>0 + 0 = 0</td></tr>
+                    <tr><td>21</td><td>Daniel Zuvela</td><td>Hyökkääjä</td><td>0 + 0 = 0</td></tr>
+                    <tr><td>26</td><td>Topias Teukku</td><td>Hyökkääjä</td><td>1 + 2 = 3</td></tr>
+                    <tr><td>32</td><td>Jonas Vuorio</td><td>Maalivahti</td><td>0.963</td></tr>
+                    <tr><td>33</td><td>Eelis Juuso</td><td>Puolustaja</td><td>0 + 2 = 2</td></tr>
+                    <tr><td>45</td><td>Julius Mäkinen</td><td>Hyökkääjä</td><td>0 + 1 = 1</td></tr>
+                    <tr><td>70</td><td>Jyri Kaapeli</td><td>Hyökkääjä</td><td>1 + 0 = 1</td></tr>
+                    <tr><td>71</td><td>Ville Närvä</td><td>Hyökkääjä</td><td>1 + 1 = 2</td></tr>
+                    <tr><td>88</td><td>Roni Siikavirta</td><td>Hyökkääjä</td><td>1 + 0 = 1</td></tr>
+                    <tr><td>94</td><td>Henri Saavalainen</td><td>Hyökkääjä</td><td>1 + 2 = 3</td></tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="social-media">
+            <a href="https://www.tiktok.com/@laurea.penguins" target="_blank">
+                <img src="./images/tiktok_icon.png" alt="TikTok Logo">
+                
+            </a>
+            <a href="https://www.instagram.com/laureapenguins/" target="_blank">
+                <img src="./images/instagram_logo.jpeg" alt="Instagram Logo">
+            </a>
+        </div>
+        <p>Tämä on Laurea Penguinsin virallinen sivusto. Kaikki esitetyt Laurea Penguinsin logot ja 
+            tunnukset ovat sen joukkueen omaisuutta, eikä niitä saa toisintaa ilman hyväksyntää. 
+            © Laurea Penguins 2024. Kaikki oikeudet pidätetään. Kaikki Laurea Penguinsin joukkueen 
+            pelaajien nimillä ja numeroilla varustetut pelipaidat ovat virallisesti Laurea Penguinsin 
+            ja PRIMA:n lisenssin alla. Kaikki oikeudet pidätetään. Kaikki muut kolmannen osapuolen 
+            tavaramerkit ja tekijänoikeudet ovat niiden omistajien omaisuutta. Kaikki oikeudet 
+            pidätetään.</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Toggle the language menu dropdown in desktop view
+        document.getElementById('desktopLanguageButton').addEventListener('click', function (event) {
+            event.stopPropagation(); // Prevent the click from propagating
+        
+            const dropdown = document.getElementById('desktopLanguageDropdown');
+            const button = document.getElementById('desktopLanguageButton');
+        
+            // Toggle dropdown visibility
+            const isVisible = dropdown.style.display === 'block';
+            dropdown.style.display = isVisible ? 'none' : 'block';
+        
+            // Only adjust positioning if the dropdown is visible
+            if (!isVisible) {
+                const buttonRect = button.getBoundingClientRect();
+                const dropdownRect = dropdown.getBoundingClientRect();
+        
+                // Check if dropdown overflows the viewport
+                if (buttonRect.right + dropdownRect.width > window.innerWidth) {
+                    dropdown.style.left = `-${dropdownRect.width - buttonRect.width}px`; // Adjust to the left
+                } else {
+                    dropdown.style.left = '0px'; // Default positioning
+                }
+            }
+        });
+        
+// Ensure proper alignment for the dropdown on both views
+function adjustLanguageDropdown() {
+    const dropdown = document.querySelector('.language-dropdown');
+    if (!dropdown) return;
+
+    // For mobile: align to button edge
+    const mobileMenuButton = document.querySelector('.language-button');
+    if (window.innerWidth < 768 && mobileMenuButton) {
+        dropdown.style.left = '0';
+        dropdown.style.width = '100%';
+    } else {
+        dropdown.style.left = ''; // Reset for desktop
+        dropdown.style.width = 'auto';
+    }
+}
+// Adjust dropdown alignment on resize
+window.addEventListener('resize', adjustLanguageDropdown);
+window.addEventListener('DOMContentLoaded', adjustLanguageDropdown);
+
+// Change language function (same as before)
+function changeLanguage(languageCode) {
+    alert('Language changed to: ' + languageCode);
+    const languageButton = document.getElementById('desktopLanguageButton');
+    languageButton.innerText = languageCode.toUpperCase();
+
+    // Close the dropdown after selecting a language
+    document.getElementById('desktopLanguageDropdown').style.display = 'none';
+}
+
+// Close the dropdown if clicking outside
+window.addEventListener('click', function () {
+    const dropdown = document.getElementById('desktopLanguageDropdown');
+    if (dropdown) {
+        dropdown.style.display = 'none';
+    }
+
+});
+// Toggle Language Menu (click or key)
+function toggleLanguageMenu() {
+    const languageDropdown = document.querySelector('.language-dropdown');
+    const isVisible = languageDropdown.style.display === 'block';
+    languageDropdown.style.display = isVisible ? 'none' : 'block';
+
+    // Update aria-expanded for accessibility
+    const languageButton = document.querySelector('.language-button');
+    if (languageButton) {
+        languageButton.setAttribute('aria-expanded', !isVisible);
+    }
+}
+
+// Handle Key Press to Toggle Language Menu
+function handleLanguageKey(event) {
+    if (event.key === 'Enter' || event.key === ' ') { // Check for Enter or Space
+        event.preventDefault(); // Prevent default button press behavior
+        toggleLanguageMenu();
+    }
+}
+
+// Close the dropdown when clicking outside
+window.addEventListener('click', function (event) {
+    const languageDropdown = document.querySelector('.language-dropdown');
+    const languageButton = document.querySelector('.language-button');
+
+    if (languageDropdown && languageButton && !languageButton.contains(event.target) && !languageDropdown.contains(event.target)) {
+        languageDropdown.style.display = 'none';
+        languageButton.setAttribute('aria-expanded', 'false');
+    }
+});
+
+    </script>
+</body>
+</html>

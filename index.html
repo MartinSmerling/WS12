@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laurea Penguins</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/styles_index.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">
+            <img src="./images/IMG_0164.jpg" alt="Logo">
+            <span class="logo-name">LAUREA PENGUINS</span>
+        </div>
+            <!-- Mobile Menu Button (only displayed in mobile view) -->
+            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-expanded="false">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Mobile Menu -->
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="mobileMenuLabel">Valikko</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <!-- Navigation Links -->
+                    <ul class="navbar-nav mb-3">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Koti</a></li>
+                        <li class="nav-item"><a class="nav-link" href="players.html">Pelaajat</a></li>
+                        <li class="nav-item"><a class="nav-link" href="shop.html">Kauppa</a></li>
+                        <li class="nav-item"><a class="nav-link" href="stats.html">Otteluohjelma</a></li>
+                        <li class="nav-item"><a class="nav-link" href="video.html">Video</a></li>
+                    </ul>
+                    <!-- Language Menu -->
+                    <div class="language-menu">
+                        <h6>Kieli:</h6>
+                        <button class="language-button btn btn-outline-secondary mb-2 w-100" 
+                                onclick="toggleLanguageMenu()" 
+                                onkeypress="handleLanguageKey(event)" 
+                                aria-expanded="false">FI</button>
+                        <ul class="language-dropdown list-group" style="display: none;">
+                            <li class="list-group-item" onclick="changeLanguage('en')">Englanti</li>
+                            <li class="list-group-item" onclick="changeLanguage('fi')">Suomi</li>
+                            <li class="list-group-item" onclick="changeLanguage('es')">Espanja</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+    <!-- Desktop Navigation (visible only on larger screens) -->
+<nav class="nav-links d-none d-lg-flex align-items-center">
+    <a href="index.html">Koti</a>
+    <a href="players.html">Pelaajat</a>
+    <a href="shop.html">Kauppa</a>
+    <a href="stats.html">Otteluohjelma</a>
+    <a href="video.html">Video</a>
+
+    <!-- Language Menu for Desktop -->
+    <div class="language-menu ms-3">
+        <button id="desktopLanguageButton" class="language-button btn btn-outline-secondary">FI</button>
+        <ul id="desktopLanguageDropdown" class="language-dropdown list-group">
+            <li class="list-group-item" onclick="changeLanguage('en')">Englanti</li>
+            <li class="list-group-item" onclick="changeLanguage('fi')">Suomi</li>
+            <li class="list-group-item" onclick="changeLanguage('es')">Espanja</li>
+        </ul>
+    </div>
+</nav>
+
+
+    </header>
+    <main class="container">
+        <section class="left-content">
+            <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="10000">
+                        <img src="./images/introducing_penguins.png" class="d-block w-100" alt="Slide 1">
+                        <div class="carousel-caption">
+                            <h5>Laurea Penguins kaudella 2024 - 2025</h5>
+                            <p>Penguins pelaa FCAA -sarjaa, joka koostuu useiden eri korkeakoulujen joukkueista</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="10000">
+                        <img src="./images/penguins_team_kopio.png" class="d-block w-100" alt="Slide 2">
+                        <div class="carousel-caption">
+                            <h5>MPKK - Penguins</h5>
+                            <p>Penguins marssi MPKK:n yli maalein 6 - 5</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./images/gameday1_penguins.png" class="d-block w-100" alt="Slide 3">
+                        <div class="carousel-caption">
+                            <h5>Laurea Penguins debytoi FCAA -liigassa</h5>
+                            <p>Debyyttimatsi pelattiin Parrut HD Rediä vastaan</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+            
+            <div class="small-images">
+                <img src="./images/1gameday_laurea.png" alt="Small Image 1">
+                <img src="./images/2gameday_laurea.png" alt="Small Image 2">
+                <img src="./images/penguins_team.PNG" alt="Small Image 3">
+            </div>
+        </section>        
+        <aside class="right-content">
+            <h2>Muiden joukkueen tapahtumat</h2>
+            <ul>
+                <li><a href="pelit.html">Pelit</a></li>
+                <li><a href="sarjataulukko.html">Sarjataulukko</a></li>
+                <li><a href="lopputurnaus.html">Lopputurnaus</a></li>
+                <li><a href="https://www.gameresultsonline.com/fcaa/fcaa-2024-2025/10526/statistics">Tilastot</a></li>
+            </ul>
+        </aside>
+    </main>
+    <footer class="footer">
+        <div class="social-media">
+            <a href="https://www.tiktok.com/@laurea.penguins" target="_blank">
+                <img src="./images/tiktok_icon.png" alt="TikTok Logo">
+                
+            </a>
+            <a href="https://www.instagram.com/laureapenguins/" target="_blank">
+                <img src="./images/instagram_logo.jpeg" alt="Instagram Logo">
+            </a>
+        </div>
+        <p>Tämä on Laurea Penguinsin virallinen sivusto. Kaikki esitetyt Laurea Penguinsin logot ja 
+            tunnukset ovat sen joukkueen omaisuutta, eikä niitä saa toisintaa ilman hyväksyntää. 
+            © Laurea Penguins 2024. Kaikki oikeudet pidätetään. Kaikki Laurea Penguinsin joukkueen 
+            pelaajien nimillä ja numeroilla varustetut pelipaidat ovat virallisesti Laurea Penguinsin 
+            ja PRIMA:n lisenssin alla. Kaikki oikeudet pidätetään. Kaikki muut kolmannen osapuolen 
+            tavaramerkit ja tekijänoikeudet ovat niiden omistajien omaisuutta. Kaikki oikeudet 
+            pidätetään.</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Toggle the language menu dropdown in desktop view
+document.getElementById('desktopLanguageButton').addEventListener('click', function (event) {
+    event.stopPropagation(); // Prevent the click from propagating
+    const dropdown = document.getElementById('desktopLanguageDropdown');
+    const isVisible = dropdown.style.display === 'block';
+    dropdown.style.display = isVisible ? 'none' : 'block';
+
+        // Check if dropdown overflows the viewport
+        if (buttonRect.right + dropdownRect.width > window.innerWidth) {
+            dropdown.style.left = `-${dropdownRect.width - buttonRect.width}px`; // Adjust to the left
+        } else {
+            dropdown.style.left = '0px'; // Default positioning
+        }
+});
+// Ensure proper alignment for the dropdown on both views
+function adjustLanguageDropdown() {
+    const dropdown = document.querySelector('.language-dropdown');
+    if (!dropdown) return;
+
+    // For mobile: align to button edge
+    const mobileMenuButton = document.querySelector('.language-button');
+    if (window.innerWidth < 768 && mobileMenuButton) {
+        dropdown.style.left = '0';
+        dropdown.style.width = '100%';
+    } else {
+        dropdown.style.left = ''; // Reset for desktop
+        dropdown.style.width = 'auto';
+    }
+}
+// Adjust dropdown alignment on resize
+window.addEventListener('resize', adjustLanguageDropdown);
+window.addEventListener('DOMContentLoaded', adjustLanguageDropdown);
+
+// Change language function (same as before)
+function changeLanguage(languageCode) {
+    alert('Language changed to: ' + languageCode);
+    const languageButton = document.getElementById('desktopLanguageButton');
+    languageButton.innerText = languageCode.toUpperCase();
+
+    // Close the dropdown after selecting a language
+    document.getElementById('desktopLanguageDropdown').style.display = 'none';
+}
+
+// Close the dropdown if clicking outside
+window.addEventListener('click', function () {
+    const dropdown = document.getElementById('desktopLanguageDropdown');
+    if (dropdown) {
+        dropdown.style.display = 'none';
+    }
+
+});
+// Toggle Language Menu (click or key)
+function toggleLanguageMenu() {
+    const languageDropdown = document.querySelector('.language-dropdown');
+    const isVisible = languageDropdown.style.display === 'block';
+    languageDropdown.style.display = isVisible ? 'none' : 'block';
+
+    // Update aria-expanded for accessibility
+    const languageButton = document.querySelector('.language-button');
+    if (languageButton) {
+        languageButton.setAttribute('aria-expanded', !isVisible);
+    }
+}
+
+// Handle Key Press to Toggle Language Menu
+function handleLanguageKey(event) {
+    if (event.key === 'Enter' || event.key === ' ') { // Check for Enter or Space
+        event.preventDefault(); // Prevent default button press behavior
+        toggleLanguageMenu();
+    }
+}
+
+// Close the dropdown when clicking outside
+window.addEventListener('click', function (event) {
+    const languageDropdown = document.querySelector('.language-dropdown');
+    const languageButton = document.querySelector('.language-button');
+
+    if (languageDropdown && languageButton && !languageButton.contains(event.target) && !languageDropdown.contains(event.target)) {
+        languageDropdown.style.display = 'none';
+        languageButton.setAttribute('aria-expanded', 'false');
+    }
+});
+
+    </script>
+</body>
+</html>
